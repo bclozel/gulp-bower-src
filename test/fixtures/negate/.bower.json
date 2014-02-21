@@ -1,0 +1,4 @@
+{
+    "name": "negate",
+    "ignore": ["*.js","!main.js"]
+}

@@ -1,0 +1,13 @@
+{
+    "name": "test",
+    "dependencies": {
+        "simple": "*",
+        "overwritten": "*",
+        "empty": "*"
+    },
+    "overrides": {
+        "overwritten": {
+            "ignore": ["test.js"]
+        }
+    }
+}
