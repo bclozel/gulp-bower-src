@@ -22,6 +22,27 @@ Install with [npm](https://npmjs.org/package/gulp-bower-src)
 npm install --save-dev gulp-bower-src
 ```
 
+## Overriding ignores in your bower.json
+
+```js
+{
+    "name": "myapp",
+    "description": "My wonderful application",
+    "dependencies": {
+        "foo": "~2.1",
+        "bar": "~1.0",
+        "baz": "*"
+    },
+    "overrides": {
+        "foo": {
+            "ignore": ["test/**"]
+        },
+        "bar": {
+            "ignore": ["dist/**", "src/**"]
+        }
+    }
+}
+```
 
 ## Examples
 
