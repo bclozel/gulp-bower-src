@@ -32,6 +32,19 @@ var processDependencies = function(name, bowerJson, bowerDirectory, dependencies
         return "!" + basePath + pattern;
     };
 
+    var ignoreEmptyFolders = function(pattern) {
+        if(!pattern || pattern.indexOf("/**", pattern.length -3) == -1) {
+            return "";
+        }
+        else {
+            return pattern.substring(0, pattern.length -3);
+        }
+    }
+
+    var notNull = function(item) {
+        return item;
+    }
+
     var addNode = function(name) {
         if(!dependencies.graph.hasNode(name)) {
             dependencies.graph.addNode(name);
@@ -44,7 +57,9 @@ var processDependencies = function(name, bowerJson, bowerDirectory, dependencies
         if(dependencies.overrides[name] && dependencies.overrides[name].ignore) {
             ignores = dependencies.overrides[name].ignore;
         }
-        dependencies.components[name] = [(basePath + "**")].concat(ignores.map(updatePattern));
+        dependencies.components[name] = [(basePath + "**")]
+            .concat(ignores.map(updatePattern).filter(notNull))
+            .concat(ignores.map(ignoreEmptyFolders).map(updatePattern).filter(notNull));
     }
 
     if(bowerJson.dependencies) {

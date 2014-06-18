@@ -1,0 +1,4 @@
+{
+    "name": "emptyfolder",
+    "ignore": ["test/**"]
+}

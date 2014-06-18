@@ -55,6 +55,14 @@ describe('bowerSrc()', function () {
         ]).fromConfig("simple.json").when(done);
     });
 
+    it('should ignore empty folders as well', function (done) {
+        expect([
+            "/fixtures/emptyfolder",
+            "/fixtures/emptyfolder/dist",
+            "/fixtures/emptyfolder/dist/dist.js"
+        ]).fromConfig("emptyfolder.json").when(done);
+    });
+
     it("should throw an exception when using negate glob patterns in ignore", function(done) {
         try {
             streamFromConfig("negate.json");
