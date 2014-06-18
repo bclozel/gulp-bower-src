@@ -1,5 +1,4 @@
 'use strict';
-var gutil = require('gulp-util');
 var es = require("event-stream");
 var path = require("path");
 var should = require("should");

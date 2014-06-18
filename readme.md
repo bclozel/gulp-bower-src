@@ -1,4 +1,4 @@
-# [gulp](https://github.com/wearefractal/gulp)-bower-src [![Build Status](https://secure.travis-ci.org/bclozel/gulp-bower-src.png?branch=master)](http://travis-ci.org/bclozel/gulp-bower-src)
+# [gulp](https://github.com/gulpjs/gulp)-bower-src [![Build Status](https://secure.travis-ci.org/bclozel/gulp-bower-src.png?branch=master)](http://travis-ci.org/bclozel/gulp-bower-src)
 
 > Gulp-src [bower](http://bower.io) components files
 
@@ -10,8 +10,7 @@ Bower expects package maintainers to add `"ignore"` attributes to their JSON
 is currently [under discussion in the bower community](https://github.com/bower/bower/issues/585).
 
 For the time being, this gulp plugin does not support negate glob patterns in ignore.
-See issues [bower/bower#294](https://github.com/bower/bower/issues/294) and
-[bower/bower#296](https://github.com/bower/bower/issues/296).
+See issue [isaacs/node-glob#62](https://github.com/isaacs/node-glob/issues/62).
 
 
 ## Install
