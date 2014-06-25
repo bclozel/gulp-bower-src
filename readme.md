@@ -61,7 +61,7 @@ Copy resources to `dist/lib` and uglify non-minified JavaScript files on the fly
 
 ```js
 var gulp = require('gulp');
-var filter = require('gulp-filter');
+var gulpFilter = require('gulp-filter');
 var bowerSrc = require('gulp-bower-src');
 var uglify = require('gulp-uglify');
 
